@@ -63,7 +63,7 @@ async function runRetryCmd(inputs: Inputs): Promise<void> {
     await execSync(inputs.on_retry_command, { stdio: 'inherit' });
     // eslint-disable-next-line
   } catch (error: any) {
-    info(`WARNING: Retry command threw the error ${error.message}`);
+    info(`⚠️ WARNING: Retry command threw the error ${error.message}`);
   }
 }
 
@@ -135,7 +135,7 @@ async function runAction(inputs: Inputs) {
       // just keep overwriting attempts output
       setOutput(OUTPUT_TOTAL_ATTEMPTS_KEY, attempt);
       await runCmd(attempt, inputs);
-      info(`Command completed after ${attempt} attempt(s).`);
+      info(`ℹ️ Command completed after ${attempt} attempt(s).`);
       break;
       // eslint-disable-next-line
     } catch (error: any) {
@@ -152,9 +152,9 @@ async function runAction(inputs: Inputs) {
       } else {
         await runRetryCmd(inputs);
         if (inputs.warning_on_retry) {
-          warning(`Attempt ${attempt} failed. Reason: ${error.message}`);
+          warning(`❌ Attempt ${attempt} failed. Reason: ${error.message}`);
         } else {
-          info(`Attempt ${attempt} failed. Reason: ${error.message}`);
+          info(`❌ Attempt ${attempt} failed. Reason: ${error.message}`);
         }
       }
     } finally {
