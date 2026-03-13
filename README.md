@@ -4,6 +4,11 @@
 > This is a fork of the original `nick-invision/retry` action.
 > We're updating master branch from the original repo.
 > It is then, with all the other changes merged into `shoptet-master` branch which we use in actions.
+> Main features of this fork:
+>
+> - Updated dependencies
+> - Node 24 support
+> - Add variable retry wait strategy
 
 Retries an Action step on failure or timeout. This is currently intended to replace the `run` step for moody commands.
 
