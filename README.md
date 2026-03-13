@@ -1,5 +1,10 @@
 # retry
 
+> [!IMPORTANT]
+> This is a fork of the original `nick-invision/retry` action.
+> We're updating master branch from the original repo.
+> It is then, with all the other changes merged into `shoptet-master` branch which we use in actions.
+
 Retries an Action step on failure or timeout. This is currently intended to replace the `run` step for moody commands.
 
 **NOTE:** Ownership of this project was transferred to my personal account `nick-fields` from my work account `nick-invision`. Details [here](#Ownership)
